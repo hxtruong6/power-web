@@ -1,0 +1,93 @@
+@userUrl = http://localhost:8084/api/user
+
+@baseUrl = http://localhost:8084/api/collections
+
+@id1 = 22fd3723-3198-4f6f-9aa5-87eaee1bddc9
+
+@id2 = 348f77de-af07-4dfc-b063-3a5c9e883e7f
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE2MjU5NDExODYsImV4cCI6MTYyNjAyNzU4Nn0.tdjZ1IDrrhSMn1sGZvKTL4jsxrSk22MdOWZ4LX0Bl8A
+
+###
+# POST {{userUrl}}/register HTTP/1.1
+
+POST {{userUrl}}/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
+###
+GET {{baseUrl}}/ HTTP/1.1
+Authorization: Bearer {{token}}
+
+### get by slug in
+GET {{baseUrl}}?slug_in=deal-of-the-day HTTP/1.1
+Authorization: Bearer {{token}}
+
+###
+GET {{baseUrl}}/{{id1}} HTTP/1.1
+Authorization: Bearer {{token}}
+
+###
+GET {{baseUrl}}/{{id2}} 
+Authorization: Bearer {{token}}
+
+###
+POST {{baseUrl}} HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Ưu đãi trong ngày",
+    "slug": "deal-of-the-day"
+}
+
+### Edit 
+PUT {{baseUrl}} HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "id": 1,
+    "productIds": [1,2,3,4]
+}
+
+###  Create with parent id
+@parentId = 22fd3723-3198-4f6f-9aa5-87eaee1bddc9
+POST {{baseUrl}} HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "menu {{$randomInt 10 1000}}",
+    "name": "{{$guid}}",
+    "parentId": "{{parentId}}"
+}
+
+###
+PUT {{baseUrl}} HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "id": "{{id1}}",
+    "detail":"Updated {{$timestamp}}"
+}
+
+###
+@dId = 9aaeb691-ef9f-4309-8cdc-336309486004
+DELETE {{baseUrl}}/{{dId}} HTTP/1.1
+Authorization: Bearer {{token}}
+
+
+
+### 
+PUT {{baseUrl}}/category HTTP/1.1
+content-type: application/json
+
+{
+    "id": "602e3152-b61b-42ac-9b26-e6510587d85f",
+    "categoryId": "bec6b24c-10b7-45e1-9331-96ccee72ae0b"
+}

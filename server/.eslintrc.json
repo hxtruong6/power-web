@@ -1,0 +1,57 @@
+{
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es2021": true
+	},
+	"extends": ["airbnb-base", "plugin:jest/all"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 12
+	},
+	"plugins": ["@typescript-eslint", "jest"],
+	"rules": {
+		"no-unused-vars": "off",
+		"no-console": "off",
+		"no-shadow": ["warn", { "hoist": "functions", "allow": ["data"] }],
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"no-tabs": "off",
+		"class-methods-use-this": "off",
+		"comma-dangle": ["off", "always"],
+		"indent": "off",
+		"@typescript-eslint/indent": ["error", "tab"],
+		"object-curly-newline": "off",
+		"jest/no-hooks": [
+			"error",
+			{
+				"allow": ["beforeAll", "afterAll"]
+			}
+		],
+		"jest/require-top-level-describe": "off",
+		"jest/prefer-expect-assertions": ["warn", { "onlyFunctionsWithAsyncKeyword": true }],
+		"implicit-arrow-linebreak": "off",
+		"function-paren-newline": "off",
+		"no-underscore-dangle": [
+			"error",
+			{ "allowFunctionParams": true, "allowAfterThis": true, "enforceInMethodNames": true }
+		],
+		"operator-linebreak": "off",
+		"jest/require-hook": "off"
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		}
+	}
+}

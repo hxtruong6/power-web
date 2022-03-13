@@ -1,0 +1,11 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+build
+apiStimulation
+.vscode
+__test__
+# don't copy public in production
+# public 

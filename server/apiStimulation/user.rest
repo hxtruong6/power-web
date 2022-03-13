@@ -1,0 +1,26 @@
+@baseUrl = http://localhost:8084/api/user
+# @baseUrl = https://hd-server-5fl7wxtvja-as.a.run.app/api/user
+@id1 = 513f3e4a-cc77-4a38-9364-a196b0383de9
+@id2 = 348f77de-af07-4dfc-b063-3a5c9e883e7f
+
+###
+POST {{baseUrl}}/register HTTP/1.1
+content-type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin",
+    "userType": "vendor"
+}
+
+###
+POST  {{baseUrl}}/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "user_2@gmail.com",
+    "password": "abc123"
+}
+
+###
+DELETE {{baseUrl}}/513f3e4a-cc77-4a38-9364-a196b0383de9 HTTP/1.1

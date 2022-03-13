@@ -1,0 +1,168 @@
+{
+  "id": 10,
+  "title": "Rayban Rounded Sunglass Brown Color",
+  "is_featured": false,
+  "is_hot": false,
+  "price": 35.89,
+  "sale_price": null,
+  "vendor": "Young shop",
+  "review": 5,
+  "is_out_of_stock": false,
+  "depot": 50,
+  "inventory": 60,
+  "is_active": true,
+  "is_sale": false,
+  "slug": null,
+  "created_at": "2020-03-15T06:20:39.867Z",
+  "updated_at": "2020-03-15T06:20:39.867Z",
+  "variants": [],
+  "images": [
+    {
+      "id": 42,
+      "name": "10a.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "width": null,
+      "height": null,
+      "formats": null,
+      "hash": "0208616a8daa44cbb20f12eaebf8de53",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 21.67,
+      "url": "/uploads/0208616a8daa44cbb20f12eaebf8de53.jpg",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "created_at": "2020-03-15T06:20:39.908Z",
+      "updated_at": "2020-03-15T06:20:39.908Z"
+    },
+    {
+      "id": 43,
+      "name": "10b.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "width": null,
+      "height": null,
+      "formats": null,
+      "hash": "cba8c25fcf0d41d1aac41f05d8f7ad8e",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 20.16,
+      "url": "/uploads/cba8c25fcf0d41d1aac41f05d8f7ad8e.jpg",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "created_at": "2020-03-15T06:20:39.925Z",
+      "updated_at": "2020-03-15T06:20:39.925Z"
+    },
+    {
+      "id": 44,
+      "name": "10c.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "width": null,
+      "height": null,
+      "formats": null,
+      "hash": "f8f22b0f8be04b559439dd7e7a4b9631",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 14.77,
+      "url": "/uploads/f8f22b0f8be04b559439dd7e7a4b9631.jpg",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "created_at": "2020-03-15T06:20:39.935Z",
+      "updated_at": "2020-03-15T06:20:39.935Z"
+    }
+  ],
+  "thumbnail": {
+    "id": 41,
+    "name": "9.jpg",
+    "alternativeText": null,
+    "caption": null,
+    "width": null,
+    "height": null,
+    "formats": null,
+    "hash": "0f04c128bb2945608bed459cdff45b2d",
+    "ext": ".jpg",
+    "mime": "image/jpeg",
+    "size": 4.7,
+    "url": "/uploads/0f04c128bb2945608bed459cdff45b2d.jpg",
+    "previewUrl": null,
+    "provider": "local",
+    "provider_metadata": null,
+    "created_at": "2020-03-15T06:20:39.893Z",
+    "updated_at": "2020-03-15T06:20:39.893Z"
+  },
+  "product_categories": [
+    {
+      "id": 1,
+      "name": "Clothing & Apparel",
+      "slug": "clothing-and-parel",
+      "created_at": "2020-03-14T10:24:42.894Z",
+      "updated_at": "2020-04-17T08:41:15.412Z"
+    }
+  ],
+  "brands": [
+    {
+      "id": 8,
+      "name": "Gucci",
+      "slug": "gucci",
+      "created_at": "2020-03-14T10:32:29.669Z",
+      "updated_at": "2020-03-14T10:32:29.669Z"
+    }
+  ],
+  "collections": [
+    {
+      "id": 6,
+      "name": "Shop Recommend Items",
+      "slug": "shop-recommend-items",
+      "created_at": "2020-04-05T05:37:37.071Z",
+      "updated_at": "2020-04-05T05:37:49.638Z"
+    },
+    {
+      "id": 3,
+      "name": "Clothings",
+      "slug": "clothings",
+      "created_at": "2020-04-01T05:58:07.982Z",
+      "updated_at": "2020-04-12T12:47:56.368Z"
+    },
+    {
+      "id": 24,
+      "name": "Fullwidth clothing best sellers",
+      "slug": "fullwidth-clothing-best-sellers",
+      "created_at": "2020-06-21T13:02:36.388Z",
+      "updated_at": "2020-08-05T08:29:28.067Z"
+    }
+  ],
+  "stores": [
+    {
+      "id": 1,
+      "name": "Global Office",
+      "slug": "global-office",
+      "address": "325 Orchard Str, New York, United States (US)",
+      "phone": " (+053) 77-637-3300",
+      "created_at": "2021-02-15T16:10:34.972Z",
+      "updated_at": "2021-02-15T16:13:24.951Z",
+      "thumbnail": {
+        "id": 369,
+        "name": "vendor-150x150.jpg",
+        "alternativeText": "",
+        "caption": "",
+        "width": 150,
+        "height": 150,
+        "formats": null,
+        "hash": "vendor_150x150_e7c381334d",
+        "ext": ".jpg",
+        "mime": "image/jpeg",
+        "size": 4.22,
+        "url": "/uploads/vendor_150x150_e7c381334d.jpg",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_at": "2021-02-15T16:13:22.005Z",
+        "updated_at": "2021-02-15T16:13:22.020Z"
+      }
+    }
+  ]
+}

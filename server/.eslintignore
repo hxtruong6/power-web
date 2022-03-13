@@ -1,0 +1,7 @@
+**/app/public
+node_modules
+logs
+run
+coverage
+**/app/assets
+build

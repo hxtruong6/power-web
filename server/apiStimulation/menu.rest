@@ -1,0 +1,78 @@
+@url = http://localhost:8084/api
+@baseUrl = {{url}}/menu
+
+@id2 = 348f77de-af07-4dfc-b063-3a5c9e883e7f
+
+
+
+###
+POST  {{url}}/user/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "user_1@gmail.com",
+    "password": "pass123"
+}
+
+###
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJfMUBnbWFpbC5jb20iLCJpZCI6IjczYjNlODFiLTNmYTUtNGVmOS04ZDE3LTk5MWU0NTg1YzU4NSIsImlhdCI6MTYxNTU0MzkyOSwiZXhwIjoxNjE1NjMwMzI5fQ.lbHU8kgr6TZKGup-ItxXJz_EZC1dRC6Nw8NiSl2DjSY
+### Get all
+GET {{baseUrl}}/ HTTP/1.1
+Authorization: Bearer {{token}}
+
+### Get by id
+@id1 = 7018b384-50a2-403d-8a05-6613f9e0ee30
+
+GET {{baseUrl}}/{{id1}} HTTP/1.1
+Authorization: Bearer {{token}}
+
+###
+GET {{baseUrl}}/{{id2}} 
+Authorization: Bearer {{token}}
+
+###
+POST {{baseUrl}} HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "menu {{$randomInt 10 1000}}"
+}
+
+###  Create with parent id
+@parentId = 940aa7b7-0725-41d7-9e56-bf87c6026440
+POST {{baseUrl}} HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "menu update {{$randomInt 10 1000}}",
+    "parentId": "{{parentId}}"
+}
+
+###
+PUT {{baseUrl}} HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "id": "{{id1}}",
+    "name":"Menu Updated {{$timestamp}}"
+}
+
+###
+@dId = 9aaeb691-ef9f-4309-8cdc-336309486004
+DELETE {{baseUrl}}/{{dId}} HTTP/1.1
+Authorization: Bearer {{token}}
+
+
+
+### 
+PUT {{baseUrl}}/category HTTP/1.1
+content-type: application/json
+
+{
+    "id": "602e3152-b61b-42ac-9b26-e6510587d85f",
+    "categoryId": "bec6b24c-10b7-45e1-9331-96ccee72ae0b"
+}

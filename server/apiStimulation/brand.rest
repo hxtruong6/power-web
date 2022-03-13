@@ -1,0 +1,78 @@
+@userUrl = http://localhost:8084/api/user
+
+@baseUrl = http://localhost:8084/api/brand
+
+@id1 = 22fd3723-3198-4f6f-9aa5-87eaee1bddc9
+
+@id2 = 348f77de-af07-4dfc-b063-3a5c9e883e7f
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsImlkIjoiNjI2YWMzNzEtY2Q0MS00ODlhLTllOWEtYWQxOWI3NjMyY2ZiIiwiaWF0IjoxNjE0NzIyNjczLCJleHAiOjE2MTQ4MDkwNzN9.Xo2j77DFrQl8sIR7f5Ltn6hfeYfWiX2ClwSRxpeqgrw
+
+###
+# POST {{userUrl}}/register HTTP/1.1
+
+POST {{userUrl}}/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "user_03@gmail.com",
+    "password": "abc123"
+}
+###
+GET {{baseUrl}}/ HTTP/1.1
+Authorization: Bearer {{token}}
+
+###
+GET {{baseUrl}}/{{id1}} HTTP/1.1
+Authorization: Bearer {{token}}
+
+###
+GET {{baseUrl}}/{{id2}} 
+Authorization: Bearer {{token}}
+
+###
+POST {{baseUrl}} HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "brand {{$timestamp}}"
+}
+
+###  Create with parent id
+@parentId = 22fd3723-3198-4f6f-9aa5-87eaee1bddc9
+POST {{baseUrl}} HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "menu {{$randomInt 10 1000}}",
+    "name": "{{$guid}}",
+    "parentId": "{{parentId}}"
+}
+
+###
+PUT {{baseUrl}} HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "id": "{{id1}}",
+    "detail":"Updated {{$timestamp}}"
+}
+
+###
+@dId = 9aaeb691-ef9f-4309-8cdc-336309486004
+DELETE {{baseUrl}}/{{dId}} HTTP/1.1
+Authorization: Bearer {{token}}
+
+
+
+### 
+PUT {{baseUrl}}/category HTTP/1.1
+content-type: application/json
+
+{
+    "id": "602e3152-b61b-42ac-9b26-e6510587d85f",
+    "categoryId": "bec6b24c-10b7-45e1-9331-96ccee72ae0b"
+}

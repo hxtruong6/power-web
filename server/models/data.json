@@ -1,0 +1,18 @@
+{
+  "user": [
+    {
+      "id": "b9a4ea0b-aeb2-47b0-87ed-7cd7488b29fd",
+      "firstName": "hxtruong",
+      "fullName": "hxtruong",
+      "email": "hxtruong@gmail.com",
+      "password": "$2b$10$LntJNYGmTsB0P6sMYMKBOOonUrLlg04vpgIqBH2KUq.49c.iELJ6u"
+    },
+    {
+      "id": "347c57a4-4558-4d2f-91fb-3ca592eec86e",
+      "firstName": "kiotviet",
+      "fullName": "kiotviet",
+      "email": "kiotviet@gmail.com",
+      "password": "$2b$10$p.11prjWwLoZTiXZGdWxQOClFbGfCGv8JTOb5wB3a.ONgZSB0XQZC"
+    }
+  ]
+}
